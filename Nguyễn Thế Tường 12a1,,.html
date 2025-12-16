@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Mini - Giới thiệu bản thân</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background: linear-gradient(135deg, #6aa8ff, #d8e8ff);
+            color: #333;
+            padding-bottom: 40px;
+        }
+
+        /* Header */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #4a8bff, #6fa1ff);
+            color: pink;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hiệu ứng ánh sáng */
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: -20%;
+            left: -20%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 60%);
+            animation: glow 6s infinite alternate;
+            pointer-events: none;
+        }
+
+        @keyframes glow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .avatar {
+            width: 100px;
+            height: 1px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.8);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            margin-bottom: 15px;
+            transition: 0.4s;
+        }
+
+        .avatar:hover {
+            transform: scale(1.08);
+        }
+
+        .tagline {
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Section + Card Glass */
+        section {
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(10px);
+            margin: 25px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #225fcc;
+            margin-bottom: 12px;
+        }
+
+        /* Project Items */
+        .projects .item {
+            background: #f0f5ff;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border-left: 6px solid #4a8bff;
+            transition: 0.3s;
+        }
+
+        .projects .item:hover {
+            transform: translateX(5px);
+            background: #ffdd3a;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #4a8bff;
+            color: red;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        footer a {
+            color: #67b3dd;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            text-shadow: 0 0 10px white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Trang chủ -->
+    <header class="hero">
+        <img src="z7326613504999_e0e6bd1579deaa56d7d9fa0d5c5157bb.jpg" alt="?.jpg" class="">
+        <h1>Nguyễn Thế Tường</h1>
+        <p class="tagline">"Luôn học hỏi và sáng tạo mỗi ngày"</p>
+    </header>
+
+    <!-- Giới thiệu bản thân -->
+    <section class="about">
+        <h2>Giới thiệu bản thân</h2>
+        <p><strong>Học vấn:</strong> Học sinh lớp 12a1 – THCS-THPT Minh Hoà</p>
+        <p><strong>Sở thích:</strong> đạp xe , đọc sách, chơi thể thao.</p>
+    </section>
+
+    <!-- Hoạt động / Sản phẩm -->
+<section class="projects">
+  <h2>Hoạt động & Sản phẩm</h2>
+
+  <div class="item">
+    <h3>1. Tham gia hội khỏe phù đổng cấp tỉnh</h3>
+    <img src="z7326846696843_0756e92b80635aaba8933d0dfd372e3c.jpg" alt="Hội khỏe phù đổng" width="250">
+    <p>Đạt được giải nhất và nhì</p>
+  </div>
+
+  <div class="item">
+    <h3>2. Làm tinh thể bọt ngọt</h3>
+    <img src="z7326846704591_0ccb30cfd471a8734e4eaa0dc22cf766.jpg" alt="Tinh thể bọt ngọt" width="250">
+    <p>Sản phẩm tinh thể lấp lánh</p>
+  </div>
+
+  <div class="item">
+    <h3>3. Tham gia tổ chức ngày 20/11 cho thầy</h3>
+    <img src="z7326846719529_7d8a205a2a643c9c907d34d867338a93.jpg" alt="Hoạt động 20/11" width="250">
+    <p>Có một ngày thật là hạnh phúc và vui</p>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Liên hệ: nguyenthetuong.470@gmail.com</p>
+        <p>
+            Mạng xã hội:
+            <a href="https://www.facebook.com/share/17qFjBYrpo/">Facebook</a> |
+            <a href="https://www.instagram.com/tuongww_16108?igsh=NmphNzlka3JraTcx">Instagram</a>
+        </p>
+        <p>&copy; Nguyễn Thế Tường</p>
+    </footer>
+
+</body>
+</html>
